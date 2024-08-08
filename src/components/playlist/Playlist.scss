@@ -1,0 +1,493 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.bagroun {
+  background: linear-gradient(180deg, #def628 2.09%, #121212 16.7%);
+  width: 100%;
+}
+.chixi {
+  display: flex;
+  margin-top: 28px;
+  margin-left: 41px;
+  gap: 20px;
+}
+.chixi_tex {
+  display: flex !important;
+  flex-direction: column !important;
+  h2 {
+    margin-top: 100px;
+    font-family: Circular Std;
+    font-size: 90px;
+    font-weight: 900;
+    line-height: 154.33px;
+    letter-spacing: -0.06em;
+    text-align: left;
+    color: #fff;
+  }
+  .texx {
+    margin-top: 100px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: -290px;
+    h2 {
+      margin-top: -40px;
+      margin-left: 150px;
+    }
+    span {
+      font-family: Circular Std;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20.24px;
+      letter-spacing: -0.02em;
+      text-align: left;
+      margin-left: 30px;
+
+      // margin-right: 90px;
+    }
+  }
+  .made {
+    display: flex;
+    align-items: center;
+    margin-right: 175px;
+    // gap: 10px;
+    .for {
+      font-family: Circular Std;
+      font-size: 18px;
+      font-weight: 450;
+      line-height: 22.77px;
+      letter-spacing: 0.01em;
+      text-align: left;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    .song {
+      font-family: Circular Std;
+      font-size: 18px;
+      font-weight: 450;
+      line-height: 22.77px;
+      letter-spacing: 0.01em;
+      text-align: left;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    p {
+      color: #fff;
+    }
+  }
+  .wolf {
+    font-family: Circular Std;
+    font-size: 20px;
+    font-weight: 450;
+    line-height: 25.3px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+  }
+}
+.herro {
+  margin-left: 41px;
+  margin-top: 31px;
+  margin-right: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .left {
+    display: flex;
+    gap: 28px;
+    .img1 {
+      width: 72px;
+      height: 72px;
+    }
+    .img2 {
+      width: 52px;
+      height: 52px;
+    }
+    .img3 {
+      width: 52px;
+      height: 52px;
+    }
+    .img4 {
+      width: 44px;
+      height: 44px;
+    }
+  }
+  .right {
+    display: flex;
+    gap: 20px;
+  }
+}
+// .playlist-image{
+//   width: 52px;
+// }
+.mapi {
+  display: flex;
+  align-items: center;
+}
+.playlist-item {
+  display: flex;
+  align-items: center;
+}
+.img_albon {
+  width: 50px;
+  height: 50px;
+}
+.trek {
+  font-size: 16px;
+}
+.track-info {
+  margin-top: 20px;
+  display: flex;
+  gap: 21px;
+}
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f3f3f3;
+}
+
+.spinner {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.info {
+  margin-left: 43px;
+  margin-right: 43px;
+  width: 800px;
+  margin-top: -10px;
+  padding-top: -20px;
+}
+.mpz_name {
+  font-size: 60px !important;
+}
+.hom_img {
+  height: 297px !important;
+  width: 297 !important;
+}
+.tcak_name {
+  color: rgba(255, 255, 255, 1);
+  font-family: Circular Std;
+  font-size: 18px;
+  font-weight: 350;
+  line-height: 25.3px;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+.artic_name {
+  font-family: Circular Std;
+  font-size: 17px;
+  font-weight: 450;
+  line-height: 22.77px;
+  text-align: left;
+  color: rgba(179, 179, 179, 1);
+}
+.malumotlar {
+  display: flex;
+  justify-content: space-between;
+}
+.minut {
+  margin-left: 100px;
+}
+.datat {
+  display: flex;
+}
+// chas
+.durat {
+  display: flex;
+  margin-left: 80px;
+  p {
+    font-family: Circular Std;
+    font-size: 16px;
+    font-weight: 450;
+    line-height: 22.77px;
+    text-align: left;
+    color: rgba(179, 179, 179, 1);
+  }
+}
+.album {
+  margin-right: 274px;
+}
+////
+.audio-player {
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+.audio-player audio {
+  border-radius: none;
+width: 100% !important;
+  margin-bottom: 10px;
+}
+
+.audio-player button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+// .audio-player audio {
+//   display: block !important;
+// }
+.audio-player button:hover {
+  background-color: #45a049;
+}
+// table/
+.bagroun {
+  padding: 20px;
+}
+
+.but {
+  // display: flex;
+  margin-bottom: 20px;
+}
+
+.chixi {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.hom_img {
+  width: 297px;
+  height: 297px !important;
+}
+
+.chixi_tex {
+  flex: 1;
+}
+
+.public {
+  color: #aaa;
+}
+
+.mpz_name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.wolf {
+  margin: 10px 0;
+}
+
+.made {
+  display: flex;
+  justify-content: space-between;
+}
+
+.for,
+.song {
+  font-size: 14px;
+}
+
+.herro {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.left,
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.img1,
+.img2,
+.img3,
+.img4,
+.img5,
+.img6 {
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+}
+
+.mapi {
+  margin-top: 20px;
+}
+
+.track-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.track-table th,
+.track-table td {
+  padding: 10px;
+  text-align: left;
+}
+
+.track-table img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+}
+
+.track-table .tcak_name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.track-table .artic_name {
+  font-size: 14px;
+  color: #555;
+}
+
+.track-table .durat {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.track-table .duration {
+  font-size: 14px;
+  color: #777;
+}
+
+.audio-player {
+  margin-top: 20px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 20px;
+}
+
+button {
+  background-color: #1db954;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1ed760;
+}
+.taga {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hro {
+  width: 400px;
+  border-bottom: 1px solid rgba(102, 102, 102, 1);
+}
+.albo {
+  font-family: Circular Std;
+  font-size: 16px;
+  font-weight: 450;
+  line-height: 20.24px;
+  letter-spacing: 0.09em;
+  text-align: left;
+  color: rgba(179, 179, 179, 1);
+}
+
+.albo2 {
+  margin-right: -100px;
+}
+// TABLE
+.albUM {
+  margin-right: -100px !important;
+  font-family: Circular Std;
+  font-size: 16px;
+  font-weight: 450;
+  line-height: 20.24px;
+  letter-spacing: 0.09em;
+  // text-align: left;
+  color: rgba(179, 179, 179, 1);
+}
+.duration {
+  font-family: Circular Std;
+  font-size: 20px;
+  font-weight: 450;
+  line-height: 25.3px;
+  letter-spacing: -0.03em;
+  text-align: left;
+  color: rgba(255, 255, 255, 1) !important;
+  
+}
+/* From Uiverse.io by boryanakrasteva */ 
+.btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 50px !important;
+  height: 50px;
+  width: 50px !important;
+  border-radius: 10px !important;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  position: relative;
+}
+
+.btn::after {
+  content: "like" !important;
+  width: fit-content !important;
+  height: fit-content !important;
+  position: absolute !important;
+  font-size: 15px !important;
+  color: white !important;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: 0.2s linear !important;
+  top: 115%v !important;
+}
+
+.icon {
+  width: 30px !important;
+  height: 30px !important;
+  transition: 0.2s linear !important;
+}
+
+.icon path {
+  fill: white !important;
+  transition: 0.2s linear !important;
+}
+
+.btn:hover > .icon {
+  transform: scale(1.2) !important;
+}
+
+.btn:hover > .icon path {
+  fill: rgb(177, 139, 189) !important;
+}
+
+.btn:hover::after {
+  visibility: visible !important;
+  opacity: 1 !important;
+  top: 105% !important;
+}

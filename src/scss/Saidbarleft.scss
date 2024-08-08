@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "Circular Std";
+  src: url("../../src/assets/Site_font/circular-std/CircularStd-Bold.woff2");
+}
+
+.container {
+  max-width: 280px;
+  width: 280px;
+  background-color: black;
+  height: 2584px;
+}
+
+* {
+  padding: 0;
+  left: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+span {
+  font-family: Circular Std;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22.77px;
+  text-align: left;
+
+  color: rgba(255, 255, 255, 1);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  img {
+    width: 32px;
+  }
+}
+.Navlink {
+  margin-left: 30px;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  align-content: center;
+}
+.wwid {
+  color: rgba(217, 217, 217, 3);
+}
+.link {
+  margin-top: 29px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.border {
+  margin-top: 20px;
+  margin-left: 23px;
+  width: 250px;
+  border: 1px solid rgba(40, 40, 40, 1);
+}
+.parent {
+  margin-top: 22px;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  p {
+    color: #fff;
+    font-family: Circular Std;
+    font-size: 18px;
+    font-weight: 450;
+    line-height: 22.77px;
+    text-align: left;
+    color: rgba(179, 179, 179, 1);
+  }
+}
+
+.reklama{
+    margin-top: 1284px;
+}
+.link-active{
+  color:red !important;
+}

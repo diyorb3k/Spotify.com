@@ -1,0 +1,101 @@
+* {
+  padding: 0;
+  left: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 330px;
+  width: 100%;
+}
+.right {
+  justify-content: space-between;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  p {
+    font-family: Circular Std;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25.3px;
+    letter-spacing: 0.01em;
+    text-align: left;
+
+    color: rgba(204, 204, 204, 1);
+  }
+  .righ {
+    display: flex;
+  }
+}
+.Let {
+  margin-left: 20px;
+  margin-top: 39px;
+  width: 306px;
+  p {
+    font-family: Circular Std;
+    font-size: 16px;
+    font-weight: 450;
+    line-height: 24px;
+    text-align: left;
+    color: rgba(204, 204, 204, 1);
+  }
+}
+
+.bor {
+  width: 102px;
+  border: 7px solid rgba(179, 179, 179, 0.3);
+  border-radius: 10px;
+}
+.bor1 {
+  width: 79px;
+  border: 7px solid rgba(179, 179, 179, 0.3);
+  border-radius: 10px;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.atena {
+width: 179px;
+  margin-top: 23px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.starastiga {
+  margin-left: 20px;
+}
+.godo {
+  margin: 15px;
+  max-width: 306px;
+  p {
+    font-family: Circular Std;
+    font-size: 16px;
+    font-weight: 450;
+    line-height: 25px;
+    text-align: left;
+    color: rgba(204, 204, 204, 1);
+
+  }
+}
+
+.btn_grup {
+  button {
+    margin-left: 25px;
+    margin-right: 40px;
+    border: none;
+    font-family: Circular Std;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22.77px;
+    letter-spacing: 0.14em;
+    text-align: center;
+    border-radius: 40px;
+    background-color: #fff;
+    color: black;
+    padding: 20px 60px 19px 60px;
+  }
+}
