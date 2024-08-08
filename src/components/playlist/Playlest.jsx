@@ -162,7 +162,7 @@ const Playlist = () => {
         <div className="herro">
           <div className="left">
             <img className="img1" src={img2} alt="Play" />
-            <img className="img2" src={img1} alt="Heart" />
+         <NavLink to="/likes"><img className="img2" src={img1} alt="Heart" /></NavLink>
             <img className="img3" src={img3} alt="Download" />
             <img className="img4" src={img4} alt="Union" />
           </div>

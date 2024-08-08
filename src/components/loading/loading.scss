@@ -6,12 +6,10 @@
     background: linear-gradient(180deg, #def628 2.09%, #3f4309 16.7%);
     background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite;
-    width: 200vh;
+    width: 150vh;
   }
   
   .spinner {
-    margin-left: 700px;
-    position: absolute;
     border: 8px solid #f3f3f3; /* Light grey */
     border-top: 8px solid #3498db; /* Blue */
     border-radius: 50%;

@@ -9,11 +9,10 @@ import Recently from "./Recently ";
 import Jump from "./Jump";
 import Uniquely from "./Uniquely";
 import Leki from "../components/Leki";
-import Loading from "../components/loading/Loading"; // Loading komponentini import qiling
-
+import Loading from "../components/loading/Loading"; 
 const Home = () => {
   const [playlists, setPlaylists] = useState([]);
-  const [loading, setLoading] = useState(true); // Loading holatini qo'shing
+  const [loading, setLoading] = useState(true); 
   const ClientID = "fb5f64396c3a493fba57ebb3e6007485";
   const ClientSecret = "eb2fbf0211b8454192dedb3581956e2a";
   const tokenUrl = "https://accounts.spotify.com/api/token";
@@ -59,10 +58,10 @@ const Home = () => {
 
       const data = await res.json();
       setPlaylists(data.playlists.items.slice(0, 6)); 
-      setLoading(false); // Ma'lumotlar kelgandan keyin loadingni o'chiring
+      setLoading(false);
     } catch (err) {
       console.log("Error fetching playlists:", err);
-      setLoading(false); // Xatolik yuz bersa ham loadingni o'chirish
+      setLoading(false); 
     }
   };
 
@@ -75,7 +74,7 @@ const Home = () => {
   }, []);
 
   if (loading) {
-    return <Loading />; // Agar loading holati true bo'lsa, Loading komponentini qaytaring
+    return <Loading />; 
   }
 
   return (

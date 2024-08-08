@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom"; // NavLink import qilindi
+import { NavLink } from "react-router-dom";
 import "../scss/YourTop.scss";
 
 const Uniquely = () => {
@@ -48,7 +48,7 @@ const Uniquely = () => {
       console.log("Fetched data:", data);
 
       if (data.playlists && data.playlists.items) {
-        setPlaylists(data.playlists.items.slice(0, 4)); // Faqat 4 ta natija olish uchun slice metodi
+        setPlaylists(data.playlists.items.slice(0, 4)); 
       } else {
         console.log("Playlists or items not found in response:", data);
       }
@@ -76,8 +76,8 @@ const Uniquely = () => {
           playlists.map((playlist) => (
             <NavLink
               key={playlist.id}
-              to={`/playlist/${playlist.id}`} // Playlist componentiga yo'naltiradi
-              className="playlist-link" // Ixtiyoriy: styling uchun class qo'shish mumkin
+              to={`/playlist/${playlist.id}`} 
+              className="playlist-link" 
             >
               <ul>
                 <li>

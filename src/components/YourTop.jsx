@@ -4,7 +4,7 @@ import "../scss/YourTop.scss";
 
 const YourTop = () => {
   const [playlists, setPlaylists] = useState([]);
-  const navigate = useNavigate(); // Hook for navigation
+  const navigate = useNavigate(); 
   const ClientID = "fb5f64396c3a493fba57ebb3e6007485";
   const ClientSecret = "eb2fbf0211b8454192dedb3581956e2a";
   const tokenUrl = "https://accounts.spotify.com/api/token";
@@ -49,7 +49,7 @@ const YourTop = () => {
       console.log("Fetched data:", data);
 
       if (data.playlists && data.playlists.items) {
-        setPlaylists(data.playlists.items.slice(0, 4)); // Faqat 4 ta natija olish uchun slice metodi
+        setPlaylists(data.playlists.items.slice(0, 4));
       } else {
         console.log("Playlists or items not found in response:", data);
       }

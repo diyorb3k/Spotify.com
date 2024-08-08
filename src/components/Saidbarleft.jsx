@@ -17,7 +17,7 @@ const Saidbarleft = () => {
             <img src={home} alt="" />
             
             <NavLink className={({isActive}) => isActive ? "sidebar-link link-active": "sidebar-link"} to="/">
-            <span>Home</span>
+            <span className="home">Home</span>
             </NavLink>
           </div>
           <div className="left">

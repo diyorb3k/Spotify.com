@@ -17,7 +17,9 @@
   box-sizing: border-box;
   text-decoration: none;
 }
-
+a{
+  color: rgba(217, 217, 217, 3);
+}
 span {
   font-family: Circular Std;
   font-size: 18px;
@@ -25,8 +27,9 @@ span {
   line-height: 22.77px;
   text-align: left;
 
-  color: rgba(255, 255, 255, 1);
+
 }
+
 
 .left {
   display: flex;
@@ -82,5 +85,5 @@ span {
     margin-top: 1284px;
 }
 .link-active{
-  color:red !important;
+  color:#fff !important;
 }
