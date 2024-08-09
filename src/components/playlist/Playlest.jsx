@@ -1,3 +1,5 @@
+// Playlist.jsx
+
 import React, { useEffect, useState, useRef, createContext, useContext } from "react";
 import { useParams, NavLink } from "react-router-dom";
 import "../playlist/Playlist.scss";
@@ -116,6 +118,10 @@ const Playlist = () => {
     return minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
   };
 
+  const handleLike = (track) => {
+    toggleLike(track); // Saqlash uchun toggleLike funksiyasini chaqirish
+  };
+
   return (
     <AudioContext.Provider
       value={{
@@ -207,7 +213,7 @@ const Playlist = () => {
                       {millisToMinutesAndSeconds(track.track.duration_ms)}
                     </p>
                     <button onClick={() => handlePlay(index)}>Play</button>
-                    <button className="btn" onClick={() => toggleLike(track.track)}>
+                    <button className="btn" onClick={() => handleLike(track.track)}>
                       {likedTracks.some((likedTrack) => likedTrack.id === track.track.id) ? "Unlike" : "Like"}
                     </button>
                   </td>
@@ -227,6 +233,10 @@ const Playlist = () => {
                 {isPlaying ? "Pause" : "Play"}
               </button>
               <button onClick={handleNext}>Next</button>
+              <button className="btn" onClick={() => handleLike(track.track)}>
+  {likedTracks.some((likedTrack) => likedTrack.id === track.track.id) ? "Unlike" : "Like"}
+</button>
+
             </div>
           </div>
         )}
