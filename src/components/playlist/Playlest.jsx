@@ -1,13 +1,7 @@
-import React, {
-  useEffect,
-  useState,
-  useRef,
-  createContext,
-  useContext,
-} from "react";
+import React, { useEffect, useState, useRef, createContext, useContext } from "react";
 import { useParams, NavLink } from "react-router-dom";
 import "../playlist/Playlist.scss";
-import Loading from "../loading/Loading"; // Import the Loading component
+import Loading from "../loading/Loading";
 import left from "../../assets/homimg/Back.svg";
 import right from "../../assets/homimg/Forward.svg";
 import Mex from "../../assets/Playlistingimg/Screenshot 2022-06-04 at 20.09.png";
@@ -17,8 +11,8 @@ import img3 from "../../assets/Playlistingimg/Download_XS.svg";
 import img4 from "../../assets/Playlistingimg/Union.svg";
 import img5 from "../../assets/Playlistingimg/Search_S (1).svg";
 import img6 from "../../assets/Playlistingimg/Frame 12.svg";
+import useStore from '../../store/useStore'; // Import the store
 
-// Create a context for audio management
 const AudioContext = createContext();
 
 export const useAudio = () => useContext(AudioContext);
@@ -29,6 +23,7 @@ const Playlist = () => {
   const [currentTrackIndex, setCurrentTrackIndex] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
+  const { likedTracks, toggleLike } = useStore(); // Use the store
 
   const tokenUrl = "https://accounts.spotify.com/api/token";
   const playlistUrl = `https://api.spotify.com/v1/playlists/${id}`;
@@ -85,7 +80,7 @@ const Playlist = () => {
 
   const handlePlay = (index) => {
     if (audioRef.current) {
-      audioRef.current.pause(); // Pause current track
+      audioRef.current.pause(); 
     }
     setCurrentTrackIndex(index);
     setIsPlaying(true);
@@ -107,7 +102,7 @@ const Playlist = () => {
     }
   };
 
-  if (!playlist) return <Loading />; // Show the loading component
+  if (!playlist) return <Loading />; 
 
   const currentTrack = playlist.tracks.items[currentTrackIndex]?.track;
   const truncatedName =
@@ -162,7 +157,7 @@ const Playlist = () => {
         <div className="herro">
           <div className="left">
             <img className="img1" src={img2} alt="Play" />
-         <NavLink to="/likes"><img className="img2" src={img1} alt="Heart" /></NavLink>
+            <NavLink to="/likes"><img className="img2" src={img1} alt="Heart" /></NavLink>
             <img className="img3" src={img3} alt="Download" />
             <img className="img4" src={img4} alt="Union" />
           </div>
@@ -212,20 +207,8 @@ const Playlist = () => {
                       {millisToMinutesAndSeconds(track.track.duration_ms)}
                     </p>
                     <button onClick={() => handlePlay(index)}>Play</button>
-                    <button class="btn">
-                      <svg
-                        class="icon"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20.503"
-                        height="20.625"
-                        viewBox="0 0 17.503 15.625"
-                      >
-                        <path
-                          id="Fill"
-                          d="M8.752,15.625h0L1.383,8.162a4.824,4.824,0,0,1,0-6.762,4.679,4.679,0,0,1,6.674,0l.694.7.694-.7a4.678,4.678,0,0,1,6.675,0,4.825,4.825,0,0,1,0,6.762L8.752,15.624ZM4.72,1.25A3.442,3.442,0,0,0,2.277,2.275a3.562,3.562,0,0,0,0,5l6.475,6.556,6.475-6.556a3.563,3.563,0,0,0,0-5A3.443,3.443,0,0,0,12.786,1.25h-.01a3.415,3.415,0,0,0-2.443,1.038L8.752,3.9,7.164,2.275A3.442,3.442,0,0,0,4.72,1.25Z"
-                          transform="translate(0 0)"
-                        ></path>
-                      </svg>
+                    <button className="btn" onClick={() => toggleLike(track.track)}>
+                      {likedTracks.some((likedTrack) => likedTrack.id === track.track.id) ? "Unlike" : "Like"}
                     </button>
                   </td>
                 </tr>
@@ -243,7 +226,6 @@ const Playlist = () => {
               >
                 {isPlaying ? "Pause" : "Play"}
               </button>
-
               <button onClick={handleNext}>Next</button>
             </div>
           </div>
