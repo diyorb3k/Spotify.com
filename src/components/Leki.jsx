@@ -19,6 +19,10 @@ const Leki = () => {
   }, []);
 
   useEffect(() => {
+    localStorage.setItem("likedTracks", JSON.stringify(likedTracks));
+  }, [likedTracks]);
+
+  useEffect(() => {
     if (audioRef.current) {
       isPlaying ? audioRef.current.play() : audioRef.current.pause();
     }
@@ -42,6 +46,18 @@ const Leki = () => {
   const handlePrevious = () => {
     if (currentTrackIndex > 0) {
       handlePlay(currentTrackIndex - 1);
+    }
+  };
+
+  const handleRemove = (index) => {
+    const updatedTracks = likedTracks.filter((_, i) => i !== index);
+    setLikedTracks(updatedTracks);
+
+    if (currentTrackIndex === index) {
+      setIsPlaying(false);
+      setCurrentTrackIndex(null);
+    } else if (currentTrackIndex > index) {
+      setCurrentTrackIndex(currentTrackIndex - 1);
     }
   };
 
@@ -82,13 +98,14 @@ const Leki = () => {
                   {track.artists.map(artist => artist.name).join(", ")}
                 </p>
                 <button onClick={() => handlePlay(index)}>Play</button>
+                <button onClick={() => handleRemove(index)}>Remove</button>
               </div>
             </div>
           ))}
         </div>
         {currentTrack && (
           <div className="audio-player">
-            <audio ref={audioRef} src={currentTrack.preview_url} />
+            <audio ref={audioRef} src={currentTrack.preview_url} controls />
             <div className="controls">
               <button onClick={handlePrevious}>Previous</button>
               <button onClick={isPlaying ? handlePause : () => setIsPlaying(true)}>

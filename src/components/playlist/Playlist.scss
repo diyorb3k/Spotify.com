@@ -250,19 +250,15 @@ width: 100% !important;
   cursor: pointer;
   font-size: 16px;
 }
-// .audio-player audio {
-//   display: block !important;
-// }
+
 .audio-player button:hover {
   background-color: #45a049;
 }
-// table/
 .bagroun {
   padding: 20px;
 }
 
 .but {
-  // display: flex;
   margin-bottom: 20px;
 }
 
@@ -490,4 +486,8 @@ button:hover {
   visibility: visible !important;
   opacity: 1 !important;
   top: 105% !important;
+}
+.track-info{
+  display: flex;
+
 }

@@ -1,5 +1,3 @@
-// Playlist.jsx
-
 import React, { useEffect, useState, useRef, createContext, useContext } from "react";
 import { useParams, NavLink } from "react-router-dom";
 import "../playlist/Playlist.scss";
@@ -233,10 +231,9 @@ const Playlist = () => {
                 {isPlaying ? "Pause" : "Play"}
               </button>
               <button onClick={handleNext}>Next</button>
-              <button className="btn" onClick={() => handleLike(track.track)}>
-  {likedTracks.some((likedTrack) => likedTrack.id === track.track.id) ? "Unlike" : "Like"}
-</button>
-
+              <button className="btn" onClick={() => handleLike(currentTrack)}>
+                {likedTracks.some((likedTrack) => likedTrack.id === currentTrack.id) ? "Unlike" : "Like"}
+              </button>
             </div>
           </div>
         )}
